@@ -1,0 +1,759 @@
+.home {
+	padding-bottom: 112px;
+
+	// .home__bg
+
+	&__bg {
+		position: relative;
+		background: url(../img/Home/01.jpg) no-repeat;
+		background-size: cover;
+		background-position: 0 25%;
+		min-height: 677px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1;
+		}
+	}
+
+	// .home__body
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		position: relative;
+		min-height: 677px;
+		z-index: 3;
+	}
+
+	@media (max-width: 991.98px) {
+		&__bg {
+			min-height: 450px;
+		}
+		&__body {
+			min-height: 450px;
+		}
+	}
+}
+
+.body-home {
+
+	// .body-home__title
+	&__title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 42px;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+
+	&__flex {
+		display: flex;
+		width: 100%;
+	}
+
+}
+
+.btn {
+	color: #fff;
+	background-color: $mainColor;
+	border: 1px solid $mainColor;
+	padding: 9px 15px;
+	border-radius: 50px;
+	letter-spacing: 1px;
+	transition: background-color 0.5s ease;
+
+	&:hover {
+		background-color: $mainColorHover;
+	}
+}
+
+
+.title {
+	margin-bottom: 20px;
+	text-align: center;
+
+	&::after {
+		content: '\f0c4';
+		font-family: $fontAwesome;
+		font-weight: 600;
+		font-size: 22px;
+		color: #ccc;
+
+	}
+
+	h3 {
+		color: $mainColor;
+		font-size: 40px;
+		font-weight: 500;
+		padding-bottom: 30px;
+	}
+}
+
+.text {
+	color: $mainDarkColor;
+	line-height: 2;
+}
+
+@media (max-width: 479.98px) {
+	.title {
+		h3 {
+			font-size: 30px;
+		}
+	}
+
+	.body-home__title {
+		font-size: 25px;
+	}
+
+	.body-home__text {
+		font-size: 16px !important;
+	}
+}
+
+// Welcome ==========================================================================================
+
+.welcome {
+	// .welcome__items
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+
+	// .welcome__image
+
+	&__image {
+		flex: 0 1 540px;
+	}
+
+	// .welcome__body
+
+	&__body {
+		flex: 0 1 500px;
+		padding: 0 0 0 15px;
+	}
+
+	@media (max-width: 991.98px) {
+		&__items {
+			flex-direction: column-reverse;
+		}
+
+		&__image {
+			flex: 0 1 100%;
+		}
+
+		&__body {
+			flex: 0 1 100%;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// Services & Pricing ===========================================================================
+
+.services {
+	padding: 80px 0 50px 0;
+	background-color: #f6f5f5;
+
+	&.services-bg {
+		padding: 50px 0;
+	}
+
+	// .services__text
+
+	&__text {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+}
+
+.card-services {
+
+	// .card-services__items
+
+	&__items {
+		display: flex;
+		margin: 0 -10px;
+	}
+
+	// .card-services__item
+
+	&__item {
+		flex: 0 1 33.333%;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		margin: 0 10px;
+		height: 670px;
+		position: relative;
+	}
+
+}
+
+.item-card {
+
+	// .item-card__image
+
+	&__image {
+		height: 214px;
+		overflow: hidden;
+		position: relative;
+		padding: 0px 0px 58% 0px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+	}
+
+	// .item-card__pricing
+
+	&__pricing {
+		padding: 30px;
+	}
+}
+
+.pricing-item {
+
+	// .pricing-item__title
+
+	&__title {
+		position: relative;
+		margin-bottom: 30px;
+
+		h3 {
+			font-size: 28px;
+			font-weight: 400;
+			padding-bottom: 30px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 40px;
+			height: 2px;
+			background-color: $mainColor;
+		}
+	}
+
+	// .pricing-item__item
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 10px 0;
+		color: $mainDarkColor;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		span {
+			font-weight: 700;
+			color: #000;
+			padding: 0 0 0 10px;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		background-color: $mainColor;
+		border-radius: 3px;
+		padding: 9px 15px;
+		margin-bottom: 8px;
+		color: #fff;
+	}
+}
+
+
+@media (max-width: 991.98px) {
+	.card-services {
+
+		// .card-services__items
+
+		&__items {
+			display: flex;
+			flex-direction: column;
+			margin: 0 -10px;
+		}
+
+		// .card-services__item
+
+		&__item {
+			flex: 0 1 33.333%;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			margin: 15px 0
+		}
+
+		.pricing-item__list {
+			ul {
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
+
+// Раздел 2 Услугы и цена ================================================================================================
+
+.services-2 {
+	background: url(../img/services/main-bg-3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 70px 0;
+
+	// .services-2__block
+
+	&__block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -20 -10px;
+
+	}
+
+	// .services-2__item
+
+	&__item {
+		flex: 0 1 33.3333%;
+		padding: 50px 10px;
+	}
+
+	// .services-2__image
+
+	&__image {
+		width: 350px;
+		height: 350px;
+		position: relative;
+		text-align: center;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+
+		a {
+			background-color: #ceac92;
+			color: #fff;
+			letter-spacing: 1.5px;
+			font-size: 18px;
+			padding: 8px 21px;
+			border-radius: 8px;
+
+			&:hover {
+				background-color: #ceac80;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+// РАБОТА =============================================================================
+
+
+
+.gallery-works {
+
+	// .gallery-works__items
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+}
+
+.works {
+	padding: 70px 0 100px 0;
+
+	// .works__gallery
+
+	&__gallery {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+}
+
+.gallery-works {
+
+	// .gallery-works__item
+
+	&__item {
+		width: 300px;
+		height: 200px;
+		margin: 20px;
+		border-radius: 5px;
+		box-shadow: 0 3px 5px #000;
+		position: relative;
+		overflow: hidden;
+
+		&:hover img {
+			transform: scale(1.4);
+			filter: contrast(.2)
+		}
+
+		span {
+			visibility: hidden;
+			position: absolute;
+			top: 40%;
+			left: 33%;
+			color: #fff;
+			font-size: 25px;
+			letter-spacing: 8px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all .3s ease;
+
+			&:hover {}
+
+		}
+
+		&:hover span {
+			visibility: visible;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		&__item {
+			width: 500px;
+			height: 400px;
+			margin: 20px;
+		}
+	}
+}
+
+// Второй раздел работа ================================================================================================
+
+.home {
+
+	// .home__bg-2
+
+	&__bg-2 {
+		background: url(../img/services/services-bg.png);
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	// .home__contacts-bg
+
+	&__contacts-bg{
+		background: url(../img/Home/contacts-bg.png);
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 400px;
+	}
+
+	&__bg-works {
+		background: url(../img/works/works-bg.png) center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@media (max-width: 991.98px) {
+			background-position: 100%;
+		}
+	}
+
+}
+
+.body-home-2 {
+	display: flex;
+	align-items: flex-end;
+
+	.body-home__title {
+		font-weight: 700;
+	}
+
+	.body-home__text {
+		text-align: right;
+		font-size: 25px;
+		font-weight: 400;
+		color: #fff;
+	}
+}
+
+// Раздел СТРИЖКИ ================================================================================================
+
+.services-heading {
+	padding-bottom: 60px;
+
+
+	// .services-heading__block
+
+	&__block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	@media (max-width: 767.98px) {
+		&__block {
+			flex-direction: column;
+		}
+	}
+}
+
+.block-heading {
+
+	// .block-heading__services-item
+
+	&__services-item {
+		flex: 0 1 33.3333%;
+		text-align: center;
+		padding: 0 5px;
+	}
+
+
+}
+
+.item-services {
+	// .item-services__heading
+
+	&__heading {
+		text-transform: uppercase;
+		font-size: 18px;
+		margin: 20px auto;
+	}
+}
+
+
+
+
+// Раздел цены стрижки ================================================================================================
+
+.services-pricing {
+	padding: 50px 0 100px 0;
+	background: url(../img/services/main-bg-3.png);
+
+
+	// .services-pricing__posible
+
+	&__posible {
+		margin-top: 100px;
+	}
+
+	// .services-pricing__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	// .services-pricing__block-subtitle
+	&__block-subtitle {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: 767.98px) {
+		&__item {
+			flex-direction: column;
+		}
+
+		.item-pricing__title {
+			text-align: center;
+		}
+	}
+}
+
+.heading {
+	text-align: center;
+	font-size: 30px;
+	color: #1b1b1b;
+	letter-spacing: 1.7px;
+	margin-bottom: 60px;
+}
+
+.item-pricing {
+	border-bottom: 1px solid #ACACAC4D;
+	padding: 10px;
+	// .item-pricing__title
+
+	&__title {
+		flex: 0 1 25%;
+		padding: 0 20px 0 0;
+		font-size: 18px;
+	}
+
+	// .item-pricing__price
+
+	&__price {
+		flex: 0 1 25%;
+		text-align: center;
+	}
+}
+
+.flex {
+	.item-pricing__price {
+		flex: 0 1 50%;
+	}
+}
+
+// Сотрудницы ============================================================================
+
+.workers {
+	padding-bottom: 100px;
+	// .workers__container
+
+	&__container {}
+
+	// .workers__title
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	.workers__carousel.owl-theme .owl-dots .owl-dot span {
+		background-color: #00000070;
+		transition: all .3s ease;
+		margin: 0 5px;
+		border-radius: 7px;
+
+	}
+
+	.workers__carousel.owl-theme .owl-nav.disabled+.owl-dots {
+		margin-top: 50px;
+	}
+
+	.workers__carousel.owl-theme .owl-dots .owl-dot.active span {
+		width: 12px;
+		height: 12px;
+	}
+
+	.workers__carousel.owl-theme .owl-dots .owl-dot.active span,
+	.owl-theme .owl-dots .owl-dot:hover span {
+		background-color: #00fba2;
+	}
+}
+
+.carousel-workers {
+
+	// .carousel-workers__item
+
+	&__item {
+		flex: 0 0 33.33333%;
+	}
+}
+
+.item-workers {
+
+	// .item-workers__image
+
+	&__image {
+		width: 100%;
+		height: 360px;
+		margin-bottom: 15px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .item-workers__name
+
+	&__name {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-size: 22px;
+		color: $mainColor;
+		font-weight: 700;
+
+		small {
+			font-size: 15px;
+			color: $mainDarkColor;
+		}
+	}
+}
+
+
+
+// Контакты ================================================================================
+
+.our-salon {
+	padding-bottom: 30px;
+
+	// .our-salon__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -8px;
+	}
+
+	// .our-salon__map
+
+	&__map {
+		flex: 0 1 50%;
+		padding: 0 8px;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .our-salon__image
+
+	&__image {
+		flex: 0 1 50%;
+		padding: 0 8px;
+	}
+
+	@media (max-width: 991.98px) {
+		&__map {
+			flex: 0 1 100%;
+
+			iframe {
+				width: 100%;
+				height: 380px;
+			}
+		}
+		&__image {
+			flex: 0 1 100%;
+		}
+	}
+}
