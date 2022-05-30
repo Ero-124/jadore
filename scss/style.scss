@@ -1,0 +1,42 @@
+@import "_nullstyle";
+@import "_header";
+@import "_main";
+@import "_footer";
+
+// Подключаем шрифтоф =======================================================================================
+// &display=swap - добавить при подключении через плагин
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+Armenian:100,200,300,400,500,600,700,800,900&display=swap");
+
+
+
+// Обнуление и общие параметры =======================================================
+body {
+	font-weight: 500;
+	font-family: "Noto Serif Armenian";
+	&.lock {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+
+// Оболочка ============================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}
+
+[class*="__container"] {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
