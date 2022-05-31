@@ -1,8 +1,15 @@
 .home {
 	padding-bottom: 112px;
-
+	@media (max-width: 991.98px) {
+		padding-bottom: 50px;
+	}
+	@media (max-width: 479.98px) {
+		padding-bottom: 30px;
+	}
+	&.home-pb {
+		padding: 0px 0px 30px 0px;
+	}
 	// .home__bg
-
 	&__bg {
 		position: relative;
 		background: url(../img/Home/01.jpg) no-repeat;
@@ -11,7 +18,7 @@
 		min-height: 677px;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -46,7 +53,6 @@
 }
 
 .body-home {
-
 	// .body-home__title
 	&__title {
 		text-transform: uppercase;
@@ -54,13 +60,14 @@
 		font-size: 42px;
 		color: #fff;
 		margin-bottom: 40px;
+		@media (max-width: 767.98px) {
+			font-size: 20px;
+		}
 	}
-
 	&__flex {
 		display: flex;
 		width: 100%;
 	}
-
 }
 
 .btn {
@@ -71,31 +78,29 @@
 	border-radius: 50px;
 	letter-spacing: 1px;
 	transition: background-color 0.5s ease;
-
-	&:hover {
-		background-color: $mainColorHover;
+	@media (min-width: 767.98px) {
+		&:hover {
+			background-color: $mainColorHover;
+		}
 	}
 }
-
 
 .title {
 	margin-bottom: 20px;
 	text-align: center;
 
 	&::after {
-		content: '\f0c4';
+		content: "\f0c4";
 		font-family: $fontAwesome;
 		font-weight: 600;
 		font-size: 22px;
 		color: #ccc;
-
 	}
 
 	h3 {
 		color: $mainColor;
 		font-size: 40px;
 		font-weight: 500;
-		padding-bottom: 30px;
 	}
 }
 
@@ -105,14 +110,8 @@
 }
 
 @media (max-width: 479.98px) {
-	.title {
-		h3 {
-			font-size: 30px;
-		}
-	}
-
 	.body-home__title {
-		font-size: 25px;
+		font-size: 20px;
 	}
 
 	.body-home__text {
@@ -123,6 +122,10 @@
 // Welcome ==========================================================================================
 
 .welcome {
+	padding: 0px 0px 80px 0px;
+	@media (max-width: 767.98px) {
+		padding: 0px 0px 30px 0px;
+	}
 	// .welcome__items
 
 	&__items {
@@ -135,7 +138,6 @@
 	// .welcome__image
 
 	&__image {
-		flex: 0 1 540px;
 	}
 
 	// .welcome__body
@@ -145,13 +147,29 @@
 		padding: 0 0 0 15px;
 	}
 
+	.body-welcome {
+		.body-welcome__title {
+			h3 {
+				padding-bottom: 10px;
+				b {
+					text-transform: uppercase;
+					font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+					letter-spacing: 6px;
+				}
+			}
+		}
+		.body-welcome__text {
+			max-width: 600px;
+		}
+	}
+
 	@media (max-width: 991.98px) {
 		&__items {
 			flex-direction: column-reverse;
 		}
 
 		&__image {
-			flex: 0 1 100%;
+			width: 60%;
 		}
 
 		&__body {
@@ -164,55 +182,63 @@
 // Services & Pricing ===========================================================================
 
 .services {
-	padding: 80px 0 50px 0;
 	background-color: #f6f5f5;
-
-	&.services-bg {
-		padding: 50px 0;
+	padding: 0px 0px 80px 0px;
+	@media (max-width: 991.98px) {
+		padding: 0px 0px 60px 0px;
 	}
-
+	@media (max-width: 767.98px) {
+		padding: 0px 0px 30px 0px;
+	}
 	// .services__text
-
 	&__text {
 		max-width: 800px;
 		margin: 0 auto;
 		text-align: center;
-		margin-bottom: 80px;
 	}
 }
 
 .card-services {
-
+	padding: 50px 0px 0px 0px;
+	@media (max-width: 767.98px) {
+		padding: 20px 0px 0px 0px;
+	}
 	// .card-services__items
 
 	&__items {
 		display: flex;
-		margin: 0 -10px;
+		margin: 0 -5px;
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+		}
+	}
+	&__columns {
+		padding: 0 5px;
+		flex: 0 0 33.333%;
+		overflow: hidden;
+		@media (max-width: 767.98px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	// .card-services__item
-
 	&__item {
-		flex: 0 1 33.333%;
+		height: 100%;
 		background-color: #fff;
 		border: 1px solid #ccc;
 		border-radius: 10px;
-		margin: 0 10px;
-		height: 670px;
-		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 0 0 10px 0;
 	}
-
 }
 
 .item-card {
-
 	// .item-card__image
-
 	&__image {
-		height: 214px;
 		overflow: hidden;
 		position: relative;
-		padding: 0px 0px 58% 0px;
+		padding: 0px 0px 52% 0px;
 
 		img {
 			width: 100%;
@@ -230,25 +256,41 @@
 
 	&__pricing {
 		padding: 30px;
+		flex: 1 1 auto;
+		@media (max-width: 991.98px) {
+			padding: 10px;
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 20px;
+		}
 	}
 }
 
 .pricing-item {
-
 	// .pricing-item__title
 
 	&__title {
 		position: relative;
 		margin-bottom: 30px;
-
 		h3 {
 			font-size: 28px;
 			font-weight: 400;
 			padding-bottom: 30px;
+			@media (max-width: 991.98px) {
+				font-size: 20px;
+				padding-bottom: 15px;
+			}
+			@media (max-width: 767.98px) {
+				font-size: 23px;
+			}
+			@media (max-width: 479.98px) {
+				font-size: 20px;
+			}
 		}
 
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			width: 40px;
@@ -265,6 +307,15 @@
 		align-items: center;
 		margin: 0 0 10px 0;
 		color: $mainDarkColor;
+		@media (max-width: 991.98px) {
+			font-size: 14px;
+		}
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+		}
+		@media (max-width: 479.98px) {
+			font-size: 13px;
+		}
 
 		&:last-child {
 			margin: 0;
@@ -278,36 +329,35 @@
 	}
 
 	&__btn {
-		position: absolute;
-		bottom: 0;
 		background-color: $mainColor;
-		border-radius: 3px;
-		padding: 9px 15px;
-		margin-bottom: 8px;
+		display: inline-block;
+		width: 190px;
+		padding: 10px 0;
+		border-radius: 10px;
+		text-align: center;
 		color: #fff;
+		margin: 0 auto;
+		@media (max-width: 991.98px) {
+			width: 160px;
+		}
+		@media (max-width: 767.98px) {
+			font-size: 15px;
+			width: 190px;
+		}
+		@media (max-width: 479.98px) {
+			font-size: 14px;
+			width: 160px;
+		}
 	}
 }
 
-
 @media (max-width: 991.98px) {
 	.card-services {
-
 		// .card-services__items
-
-		&__items {
-			display: flex;
-			flex-direction: column;
-			margin: 0 -10px;
-		}
 
 		// .card-services__item
 
 		&__item {
-			flex: 0 1 33.333%;
-			background-color: #fff;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			margin: 15px 0
 		}
 
 		.pricing-item__list {
@@ -325,6 +375,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 70px 0;
+	@media (max-width: 767.98px) {
+	}
 
 	// .services-2__block
 
@@ -332,15 +384,24 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: -20 -10px;
+		margin: 0 -10px;
+	}
 
+	// .services-2__columns
+	&__columns {
+		flex: 0 1 33.3333%;
+		margin: 0px 0px 100px 0px;
+		padding: 0 10px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		@media (max-width: 767.98px) {
+			margin: 0px 0px 50px 0px;
+		}
 	}
 
 	// .services-2__item
-
 	&__item {
-		flex: 0 1 33.3333%;
-		padding: 50px 10px;
 	}
 
 	// .services-2__image
@@ -350,6 +411,10 @@
 		height: 350px;
 		position: relative;
 		text-align: center;
+		@media (max-width: 767.98px) {
+			width: 233px;
+			height: 233px;
+		}
 
 		img {
 			width: 100%;
@@ -357,34 +422,33 @@
 			object-fit: cover;
 			border-radius: 50%;
 		}
-
+	}
+	&__btn {
+		text-align: center;
+		letter-spacing: 1.5px;
+		font-size: 18px;
+		border-radius: 8px;
+		height: 40px;
+		line-height: 40px;
+		@media (max-width: 767.98px) {
+			font-size: 14px;
+		}
 		a {
 			background-color: #ceac92;
 			color: #fff;
-			letter-spacing: 1.5px;
-			font-size: 18px;
-			padding: 8px 21px;
-			border-radius: 8px;
-
-			&:hover {
-				background-color: #ceac80;
+			padding: 9px 15px;
+			@media (min-width: 767.98px) {
+				&:hover {
+					background-color: #ceac80;
+				}
 			}
 		}
 	}
 }
 
-
-
-
-
-
-
 // РАБОТА =============================================================================
 
-
-
 .gallery-works {
-
 	// .gallery-works__items
 
 	&__items {
@@ -397,10 +461,9 @@
 }
 
 .works {
-	padding: 70px 0 100px 0;
+	padding: 0px 0 100px 0;
 
 	// .works__gallery
-
 	&__gallery {
 		display: flex;
 		justify-content: center;
@@ -411,7 +474,6 @@
 }
 
 .gallery-works {
-
 	// .gallery-works__item
 
 	&__item {
@@ -422,10 +484,11 @@
 		box-shadow: 0 3px 5px #000;
 		position: relative;
 		overflow: hidden;
-
-		&:hover img {
-			transform: scale(1.4);
-			filter: contrast(.2)
+		@media (min-width: 767.98px) {
+			&:hover img {
+				transform: scale(1.4);
+				filter: contrast(0.2);
+			}
 		}
 
 		span {
@@ -442,10 +505,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: all .3s ease;
-
-			&:hover {}
-
+			transition: all 0.3s ease;
 		}
 
 		&:hover span {
@@ -465,7 +525,6 @@
 // Второй раздел работа ================================================================================================
 
 .home {
-
 	// .home__bg-2
 
 	&__bg-2 {
@@ -477,7 +536,7 @@
 
 	// .home__contacts-bg
 
-	&__contacts-bg{
+	&__contacts-bg {
 		background: url(../img/Home/contacts-bg.png);
 		position: relative;
 		background-repeat: no-repeat;
@@ -494,7 +553,6 @@
 			background-position: 100%;
 		}
 	}
-
 }
 
 .body-home-2 {
@@ -507,9 +565,14 @@
 
 	.body-home__text {
 		text-align: right;
+		max-width: 900px;
 		font-size: 25px;
 		font-weight: 400;
 		color: #fff;
+		@media (max-width: 767.98px) {
+			font-size: 17px;
+			max-width: 600px;
+		}
 	}
 }
 
@@ -517,7 +580,6 @@
 
 .services-heading {
 	padding-bottom: 60px;
-
 
 	// .services-heading__block
 
@@ -535,7 +597,6 @@
 }
 
 .block-heading {
-
 	// .block-heading__services-item
 
 	&__services-item {
@@ -543,8 +604,6 @@
 		text-align: center;
 		padding: 0 5px;
 	}
-
-
 }
 
 .item-services {
@@ -557,15 +616,11 @@
 	}
 }
 
-
-
-
 // Раздел цены стрижки ================================================================================================
 
 .services-pricing {
 	padding: 50px 0 100px 0;
 	background: url(../img/services/main-bg-3.png);
-
 
 	// .services-pricing__posible
 
@@ -606,7 +661,7 @@
 }
 
 .item-pricing {
-	border-bottom: 1px solid #ACACAC4D;
+	border-bottom: 1px solid #acacac4d;
 	padding: 10px;
 	// .item-pricing__title
 
@@ -634,41 +689,58 @@
 
 .workers {
 	padding-bottom: 100px;
+	@media (max-width: 767.98px) {
+		padding: 0px 0px 50px 0px;
+	}
 	// .workers__container
 
-	&__container {}
+	&__container {
+	}
 
 	// .workers__title
 
 	&__title {
 		margin-bottom: 50px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 25px;
+		}
+		h3 {
+			@media (max-width: 767.98px) {
+				font-size: 20px;
+				padding: 0px 0px 15px 0px;
+			}
+		}
 	}
 
 	.workers__carousel.owl-theme .owl-dots .owl-dot span {
 		background-color: #00000070;
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 		margin: 0 5px;
 		border-radius: 7px;
-
 	}
 
-	.workers__carousel.owl-theme .owl-nav.disabled+.owl-dots {
+	.workers__carousel.owl-theme .owl-nav.disabled + .owl-dots {
 		margin-top: 50px;
+		@media (max-width: 767.98px) {
+			margin-top: 20px;
+		}
 	}
 
 	.workers__carousel.owl-theme .owl-dots .owl-dot.active span {
 		width: 12px;
 		height: 12px;
 	}
-
-	.workers__carousel.owl-theme .owl-dots .owl-dot.active span,
-	.owl-theme .owl-dots .owl-dot:hover span {
+	.workers__carousel.owl-theme .owl-dots .owl-dot.active span {
 		background-color: #00fba2;
+	}
+	@media (min-width: 767.98px) {
+		.owl-theme .owl-dots .owl-dot:hover span {
+			background-color: #00fba2;
+		}
 	}
 }
 
 .carousel-workers {
-
 	// .carousel-workers__item
 
 	&__item {
@@ -677,7 +749,6 @@
 }
 
 .item-workers {
-
 	// .item-workers__image
 
 	&__image {
@@ -701,15 +772,19 @@
 		font-size: 22px;
 		color: $mainColor;
 		font-weight: 700;
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+		}
 
 		small {
 			font-size: 15px;
 			color: $mainDarkColor;
+			@media (max-width: 767.98px) {
+				margin-top: 10px;
+			}
 		}
 	}
 }
-
-
 
 // Контакты ================================================================================
 
@@ -746,6 +821,7 @@
 	@media (max-width: 991.98px) {
 		&__map {
 			flex: 0 1 100%;
+			margin: 0px 0px 15px 0px;
 
 			iframe {
 				width: 100%;
@@ -755,5 +831,16 @@
 		&__image {
 			flex: 0 1 100%;
 		}
+	}
+}
+
+.text {
+	@media (max-width: 767.98px) {
+		font-size: 13px;
+	}
+}
+.title h3 {
+	@media (max-width: 767.98px) {
+		padding-bottom: 20px;
 	}
 }
