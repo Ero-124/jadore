@@ -450,7 +450,7 @@ img {
 
 .welcome .body-welcome .body-welcome__title h3 b {
   text-transform: uppercase;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 6px;
 }
 
@@ -814,7 +814,7 @@ img {
   padding: 0px 0 100px 0;
 }
 
-.works__gallery {
+.works__gallery-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -826,30 +826,49 @@ img {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 -15px;
 }
 
-.gallery-works__item {
-  width: 300px;
+.works__gallery-items .works__gallery-item {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
   height: 200px;
-  margin: 20px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 3px 5px #000;
-          box-shadow: 0 3px 5px #000;
-  position: relative;
   overflow: hidden;
+  margin: 0px 0px 30px 0px;
 }
 
 @media (min-width: 767.98px) {
-  .gallery-works__item:hover img {
+  .works__gallery-items .works__gallery-item:hover img {
     -webkit-transform: scale(1.4);
             transform: scale(1.4);
-    -webkit-filter: contrast(0.2);
-            filter: contrast(0.2);
+    -webkit-filter: contrast(0.5);
+            filter: contrast(0.5);
   }
 }
 
-.gallery-works__item span {
+@media (max-width: 767.98px) {
+  .works__gallery-items .works__gallery-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18%;
+            flex: 0 0 18%;
+    height: 80px;
+    margin: 0px 0px 10px 0px;
+  }
+}
+
+.works__gallery-items .works__gallery-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.works__gallery-items .works__gallery-item span {
   visibility: hidden;
   position: absolute;
   top: 40%;
@@ -859,24 +878,9 @@ img {
   letter-spacing: 8px;
 }
 
-.gallery-works__item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.gallery-works__item:hover span {
-  visibility: visible;
-}
-
-@media (max-width: 767.98px) {
-  .gallery-works__item {
-    width: 500px;
-    height: 400px;
-    margin: 20px;
+@media (min-width: 767.98px) {
+  .works__gallery-items .works__gallery-item span:hover span {
+    visibility: visible;
   }
 }
 

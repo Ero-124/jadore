@@ -39,7 +39,7 @@ window.addEventListener("load", function() {
 });
 
 // LightGallery JS
-lightGallery(document.querySelector(".works__gallery"));
+lightGallery(document.querySelector(".works__gallery-items"));
 
 // Owl Carousel JS
 
