@@ -15,11 +15,14 @@ body {
 	height: 100%;
 }
 ::-webkit-scrollbar {
+	@media (max-width: 767.98px) {
+		width: 10px;
+	}
 	z-index: 100;
 	background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #c82333;
+	background-color: #0c0c0c;
 }
 ul,
 ol,
@@ -52,11 +55,5 @@ $mainDarkColor: #364d59;
 $mainColor: #dc3545;
 $mainColorHover: #c82333;
 $fontAwesome: "Font Awesome 5 Free";
-
-
-@media (max-width: 767.98px) {
-	*:hover {
-	}
-}
 
 
