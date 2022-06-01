@@ -58,6 +58,38 @@ img {
   z-index: 100;
 }
 
+/*# Back to top button
+--------------------------------------------------------------*/
+#myBtn {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background-color: #149ddd;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 50px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 991.98px) {
+  #myBtn:hover {
+    background: #2eafec;
+    color: #fff;
+  }
+}
+
+#myBtn i {
+  font-size: 20px;
+  color: #fff;
+}
+
 .header {
   position: fixed;
   top: 0;

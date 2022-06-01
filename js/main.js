@@ -62,7 +62,7 @@ $(".workers__carousel").owlCarousel( {
         nav: false
       }
     }
-})
+});
 
 
 
@@ -92,15 +92,6 @@ AOS.init({
   mirror: true, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
 });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -147,11 +138,28 @@ document.addEventListener("DOMContentLoaded", function() {
           window.removeEventListener("orientationChange", lazyload);
         }
       }, 20);
-    }
+    };
 
     document.addEventListener("scroll", lazyload);
     window.addEventListener("resize", lazyload);
     window.addEventListener("orientationChange", lazyload);
   }
-})
+});
 
+
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
