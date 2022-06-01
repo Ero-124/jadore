@@ -88,29 +88,6 @@
 	}
 }
 
-.title {
-	margin-bottom: 20px;
-	text-align: center;
-
-	&::after {
-		content: "\f0c4";
-		font-family: $fontAwesome;
-		font-weight: 600;
-		font-size: 22px;
-		color: #ccc;
-	}
-
-	h3 {
-		color: $mainColor;
-		font-size: 40px;
-		font-weight: 500;
-	}
-}
-
-.text {
-	color: $mainDarkColor;
-	line-height: 2;
-}
 
 @media (max-width: 479.98px) {
 	.body-home__title {
@@ -694,11 +671,6 @@
 	@media (max-width: 767.98px) {
 		padding: 0px 0px 50px 0px;
 	}
-	// .workers__container
-
-	&__container {
-	}
-
 	// .workers__title
 
 	&__title {
@@ -836,13 +808,3 @@
 	}
 }
 
-.text {
-	@media (max-width: 767.98px) {
-		font-size: 13px;
-	}
-}
-.title h3 {
-	@media (max-width: 767.98px) {
-		padding-bottom: 20px;
-	}
-}
