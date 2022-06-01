@@ -385,30 +385,6 @@ img {
   }
 }
 
-.title {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.title::after {
-  content: "\f0c4";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  font-size: 22px;
-  color: #ccc;
-}
-
-.title h3 {
-  color: #dc3545;
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.text {
-  color: #364d59;
-  line-height: 2;
-}
-
 @media (max-width: 479.98px) {
   .body-home__title {
     font-size: 20px;
@@ -1227,21 +1203,25 @@ img {
   }
 }
 
-@media (max-width: 767.98px) {
-  .text {
-    font-size: 13px;
-  }
+.title {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-@media (max-width: 767.98px) {
-  .title h3 {
-    padding-bottom: 20px;
-  }
+.title::after {
+  content: "\f0c4";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 22px;
+  color: #ccc;
 }
 
 .title h3 {
   font-size: 40px;
-  padding: 0px 0px 15px 0px;
+  padding: 15px 0px 15px 0px;
+  color: #dc3545;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 @media (max-width: 767.98px) {
@@ -1254,6 +1234,11 @@ img {
   .title h3 {
     font-size: 20px;
   }
+}
+
+.text {
+  color: #364d59;
+  line-height: 2;
 }
 
 @media (max-width: 767.98px) {
