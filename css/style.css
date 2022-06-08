@@ -161,18 +161,10 @@ img {
   }
   .header__burger {
     position: relative;
-    width: 50px;
+    display: block;
+    width: 30px;
     height: 18px;
     z-index: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     cursor: pointer;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -180,8 +172,8 @@ img {
   .header__burger::before, .header__burger::after {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 3px;
+    width: 100%;
+    height: 2px;
     border-radius: 3px;
     background-color: #fff;
     -webkit-transition: 0.3s ease;
@@ -195,8 +187,9 @@ img {
   }
   .header__burger span {
     position: absolute;
-    width: 30px;
-    height: 3px;
+    width: 100%;
+    height: 2px;
+    top: 8px;
     border-radius: 3px;
     background-color: #fff;
     -webkit-transition: 0.3s ease;
@@ -225,13 +218,6 @@ img {
     right: -150%;
     top: 0;
     overflow: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 95px 0;
     z-index: 3;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
@@ -246,11 +232,23 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    padding: 0px 0px 30px 0px;
   }
   .header .menu__item {
     margin: 0 0 60px 0;
+  }
+  .header .menu__item:last-child {
+    margin: 0px 0px 0px 0px;
   }
   .header .menu__link {
     font-size: 20px;
@@ -929,7 +927,7 @@ img {
 }
 
 .home__bg-works {
-  background: url(../img/works/works-bg.png) center center;
+  background: url(../img/works/works-bg.jpg) center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
